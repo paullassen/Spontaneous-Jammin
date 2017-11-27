@@ -20,6 +20,7 @@
 %     end
 % end
 %%
+%% Code above is for UI, below for basic car struct testing
 clear
 close all
 
