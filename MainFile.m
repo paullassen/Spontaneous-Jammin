@@ -23,7 +23,7 @@
 clear
 close all
 
-T = 50;
+T = 40;
 ts = 0.01;
 N = T/ts;
 t = (0:N)*ts;
