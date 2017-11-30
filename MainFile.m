@@ -24,7 +24,7 @@
 clear
 close all
 
-T = 70;
+T = 100;
 ts = 0.01;
 N = T/ts;
 t = (0:N)*ts;
@@ -83,21 +83,27 @@ ylabel('Vel $\frac{m}{s}$ / Accel $\frac{m}{s^2}$', 'Interpreter' ,'latex')
 grid on
 legend('Acceleration','Velocity','Target Velocity')
 
-subplot(2,2,4)
+subplot(2,4,7)
 hold on
-plot(t,a)
 plot(t,v)
-%plot([t(find(x>499.9,1,'first')) t(find(x>499.9,1,'first'))], [-5 30], '--k')
-plot([t(1) t(end)], [car.vd car.vd], '--m')
-xlabel('Time (s)', 'Interpreter' ,'latex')
-ylabel('Vel $\frac{m}{s}$ / Accel $\frac{m}{s^2}$', 'Interpreter' ,'latex')
-plot(t,a1)
 plot(t,v1)
 %plot([t(find(x>499.9,1,'first')) t(find(x>499.9,1,'first'))], [-5 30], '--k')
+plot([t(1) t(end)], [car.vd car.vd], '--m')
 plot([t(1) t(end)], [car1.vd car1.vd], '--k')
+xlabel('Time (s)', 'Interpreter' ,'latex')
+ylabel('Velocity $\frac{m}{s}$', 'Interpreter' ,'latex')
 grid on
-legend('Acceleration of Car','Velocity of Car','Target Velocity of Car',...
-    'Acceleration of Car','Velocity of Car','Target Velocity of Car')
+legend('Velocity of Car','Velocity of Car1', 'Target Velocity of Car',...
+    'Target Velocity of Car1')
+subplot(2,4,8)
+hold on
+plot(t,a)
+plot(t,a1)
+ylabel('Acceleration $\frac{m}{s^2}$', 'Interpreter' ,'latex')
+xlabel('Time (s)', 'Interpreter' ,'latex')
+%plot([t(find(x>499.9,1,'first')) t(find(x>499.9,1,'first'))], [-5 30], '--k')
+grid on
+legend('Acceleration of Car', 'Acceleration of Car1')
 % car1 = createCar(ts,[],10,[],[],[],[]);
 % 
 % x1 = 0;
