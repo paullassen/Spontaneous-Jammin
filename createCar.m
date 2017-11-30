@@ -20,7 +20,7 @@ function [ carStruct ] = createCar( ts,t0,s0,ta,vd,tau,var )
     end
     
     if isempty(t0)
-        carStruct.t0 = 3;     % Time to next car
+        carStruct.t0 = 6;     % Time to next car
     else
         carStruct.t0 = t0; %3;     % Time to next car
     end
