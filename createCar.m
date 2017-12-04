@@ -1,6 +1,6 @@
 function [ carStruct ] = createCar( ts,t0,s0,ta,vd,tau,var )
-%CREATECAR Summary of this function goes here
-%   Detailed explanation goes here
+%CREATECAR Creates a car struct with attributes
+
     if isempty(s0)
         carStruct.s0 = 1;     % Distance between cars at 0 m/s
     else
