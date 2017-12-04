@@ -1,6 +1,6 @@
 function [ carStruct ] = updateAll( carStruct_in, nextCarPos )
-%UPDATEALL Summary of this function goes here
-%   Detailed explanation goes here
+%UPDATEALL Updates position, velocity and acceleration
+
     carStruct = updatePos(updateVel(updateAcc(carStruct_in, nextCarPos)));
 
 end
