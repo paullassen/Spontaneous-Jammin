@@ -6,6 +6,9 @@ function [ carStruct ] = updateAcc( carStruct_in, nextCarPos )
     if  ds < carStruct.st
         t = carStruct.t0-carStruct.tau;
         carStruct.acc = 2*(ds-(carStruct.s0+carStruct.vel*t))./t.^2;
+        %correction terms
+         %+(carStruct.vel*t)^2/(1+ds) (too efficient)
+         
     else
         carStruct.acc = (carStruct.vd-carStruct.vel)/carStruct.ta;
     end
